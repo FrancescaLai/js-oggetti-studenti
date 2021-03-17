@@ -40,8 +40,15 @@ for (var i = 0; i < arrayStudenti.length; i++) {
 /* 3. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere
 un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.*/
 
-for (var i = 0; i < 3; i++) {
-  var nuovoStudente = prompt("Inserisci nome, cognome e età");
-  arrayStudenti.push(nuovoStudente);
-  console.log(nuovoStudente);
-}
+var nuovoStudente = {
+  nome : null,
+  cognome : null,
+  eta : null
+};
+
+nuovoStudente.nome = prompt("Inserisci il tuo nome");
+nuovoStudente.cognome = prompt("Inserisci il tuo cognome");
+nuovoStudente.eta = prompt("Inserisci la tua età");
+
+arrayStudenti.push(nuovoStudente);
+console.log(nuovoStudente.nome + " " + nuovoStudente.cognome + " " + nuovoStudente.eta);
